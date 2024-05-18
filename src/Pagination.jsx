@@ -31,6 +31,7 @@ const EmployeeTable = () => {
           .map((employee, index) => ({ ...employee, id: index + 1 }));
         setEmployees(dataWithIds);
       } catch (error) {
+        alert("failed to fetch data")
         setError(error.message);
       }
     };
